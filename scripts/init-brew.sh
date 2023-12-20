@@ -25,12 +25,12 @@ else
 fi
 
 # Install Redis extension for all available PHP versions
-for version in $(ls -d /usr/local/Cellar/php/*/ | cut -d'/' -f6)
-do
-  echo "Installing Redis extension for PHP $version..."
-  pecl install -f redis
-  echo "extension=redis.so" >> /usr/local/etc/php/$version/php.ini
-done
+# for version in $(ls -d /usr/local/Cellar/php/*/ | cut -d'/' -f6)
+# do
+#   echo "Installing Redis extension for PHP $version..."
+#   pecl install -f redis
+#   echo "extension=redis.so" >> /usr/local/etc/php/$version/php.ini
+# done
 
 # Restart Valet to apply changes
 valet restart
